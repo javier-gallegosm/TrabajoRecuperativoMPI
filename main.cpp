@@ -106,29 +106,27 @@ int main(int argc, char** argv ){
 
         }
     }
-    //Promedio CLP y $US,
+     //Promedio CLP y $US,
     int contador = anio_dollars.size();
-    int clp=0,us=0,promedio_clp,promedio_dolares;
+    int xy=0,x=0,y=0,xx=0;
+    float a,b,c,d;
     for(int i=0; i< contador ;i++)
     {
-        clp += anio_dollars[i];
-        us += smi_dolar[i];
+        xy += anio_dollars[i]*smi_dolar[i];
+        x += anio_dollars[i];
+        y += smi_dolar[i];
+        xx += anio_dollars[i]*anio_dollars[i];
     }
-    promedio_clp = (clp/contador);
-    promedio_dolares = us/contador;
+    a = contador*xy;
+    b = x*y;
+    c = contador*xx;
+    d = x*x;
     //beta
-    float sxx=0,sxy=0,beta;
-    for (int j=0; j < contador ; j++)
-    {
-        sxy += (anio_dollars[j]-promedio_clp)*(smi_dolar[j]-promedio_dolares);
-        sxx += (anio_dollars[j]-promedio_clp)*(anio_dollars[j]-promedio_clp);
-    }
-    beta = (sxy/sxx);
+    float beta = ((a-b)/(c-d));
     //alfa
-    float alfa;
-    alfa = (promedio_dolares - (beta*promedio_clp));
+    float alfa = ((y-(beta*x))/contador);
     //Regresion lineal salario en pesos vs salario en dolares
-    //x valor en CLP
+    //x Años
     //y valor en $US 
     // For para imprimir el promedio dolar y el año correspondiente
     for(int i = 0;i<year_smi.size();i++){
