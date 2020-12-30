@@ -8,11 +8,12 @@
 #include <fstream>
 
 using namespace std;
-
+void participantes();
 
 int pos_anio(int anio){
     return(1990-anio);
 }
+
 
 
 int main(int argc, char** argv ){
@@ -134,8 +135,18 @@ int main(int argc, char** argv ){
         cout << "Salario minimo para el año: " << year_smi[i] << " en dolares es: " << smi_dolar[i] << endl;
     }
     cout << endl;
+    cout << "=== Resultado ===" << endl;
+    cout << endl;
     cout << "y = "<< alfa  << "+ " << beta << "*x" << endl;
     cout << endl;
-    cout << "Siendo X el Anio y y el valor Y el sueldo promedio en dolares" << endl;
+    cout << "Siendo X el Anio y el valor Y es sueldo promedio en dolares" << endl;
+    participantes();
+}
+void participantes(){
+    cout << endl;
+    cout << " === Integrantes ===" << endl;
+    cout << endl;
+    cout << "Javier Gallegos Mancilla" << endl;
+    cout << endl;
 }
 
