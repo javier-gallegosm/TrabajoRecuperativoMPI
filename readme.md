@@ -9,5 +9,6 @@ Para compilar
 
 Ejecutar make en la carpeta donde se encuentra el trabajo.
 
-Luego debemos ejecutar .dist/programa path smi.csv path dollar.csv
+Luego debemos ejecutar 
+.dist/programa path del smi.csv path del dollar.csv
 
