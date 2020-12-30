@@ -24,7 +24,7 @@ int main(int argc, char** argv ){
 
     // Codigo para obtener los datos del archivo smi.csv
     string linea="";
-    string path = "/home/javiervm/git/TRecuperativa/smi.csv";
+    string path = argv[1];
     ifstream archivoEntrada(path);
     std::vector<int> valores_smi, year_smi;
     for(linea; getline(archivoEntrada, linea);){
@@ -57,7 +57,7 @@ int main(int argc, char** argv ){
 
     // Codigo para obtener los datos del archivo dollars.csv
     string linea2="";
-    string path2 = "/home/javiervm/git/TRecuperativa/dollars.csv";
+    string path2 = argv[2];
     ifstream archivoEntrada2(path2);
 
     // estos vectores contienen los dolares y años en misma posicion como corresponda
